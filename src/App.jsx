@@ -1,15 +1,16 @@
 import './App.css';
 import Nabvar from  "./componentes/Nabvar";
-import Itemlist from './componentes/Itemlist';
+import ItemListContainer from './componentes/ItemListContainer';
+
 
 function App() {
   return (
     <div className="App">
 
     <Nabvar />
-    <Itemlist />
-    
-    
+    <ItemListContainer mensaje= "Bienvenido a la tienda!!" />
+
+     
 </div>
     );
 }

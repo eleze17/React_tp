@@ -1,5 +1,5 @@
 import React from "react";
-import Logo  from "./Logo";
+import CartWidget  from "./CartWidget";
 function Nabvar  ()  {
 return(
     
@@ -55,7 +55,7 @@ return(
                 </ul>
             </div>
         </div>
-    <Logo/>    
+    <CartWidget/>    
     </nav>
     
 
