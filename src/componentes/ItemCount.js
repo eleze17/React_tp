@@ -1,7 +1,7 @@
 import {React, useState} from 'react';
 
 
-const  ItemCount = ({stock})=> {
+const  ItemCount=   ({stock}) => {
 const [cont, setCont ] = useState(1);
  
 function add(){

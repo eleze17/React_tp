@@ -8,7 +8,7 @@ function App() {
     <div className="App">
 
     <Nabvar />
-    <ItemListContainer mensaje= "Bienvenido a la tienda!!" />
+    <ItemListContainer />
 
      
 </div>
