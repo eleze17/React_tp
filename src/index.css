@@ -29,54 +29,64 @@
                                 "img7 img8 img9"      ; 
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows:     500px 500px 500px;
+            background-image: url("../public/Imagenes/images.jfif");
         }
         
         .img1{grid-area: img1;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;}   
+            flex-direction: column;
+         background-color: blanchedalmond;}   
         .img2{grid-area: img2;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            background-color: blanchedalmond;   
         }    
         .img3{grid-area: img3;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;}    
+            flex-direction: column;
+            background-color: blanchedalmond;}    
         .img4{grid-area: img4;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;}    
+            flex-direction: column;
+            background-color: blanchedalmond;}    
         .img5{grid-area: img5;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;}    
+            flex-direction: column;
+            background-color: blanchedalmond;}    
         .img6{grid-area: img6;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;}    
+            flex-direction: column;
+            background-color: blanchedalmond;}    
         .img7{grid-area: img7;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;}    
+            flex-direction: column;
+            background-color: blanchedalmond;}    
         .img8{grid-area: img8;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;}     
+            flex-direction: column;
+            background-color: blanchedalmond;}     
         .img9{grid-area: img9;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;}    
+            flex-direction: column;
+            background-color: blanchedalmond;}    
         
         
         picture{
