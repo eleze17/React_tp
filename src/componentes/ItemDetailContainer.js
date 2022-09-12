@@ -4,15 +4,17 @@ import { useParams } from "react-router-dom";
 import { productos } from "./Productos";
 
 const ItemDetailContainer = () => {
+   const parametro = useParams();
+    console.log(parametro.id);
 
-    const info  = useParams()
-    console.log(info)
-    const item = productos.find((prod)=> prod.id == info.id) 
-    console.log(item)
+    const prod = productos.find(p=>p.id == parametro.id)
+    console.log(prod);
+
    return (
-    
-    <Itemdetail item = {item} />
-    
+   
+   <Itemdetail item={prod} />
+   
+   
 
    )}
 export default ItemDetailContainer
