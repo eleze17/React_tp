@@ -1,11 +1,9 @@
 import { React, useState } from 'react'
 import ItemDetailContainer from './ItemDetailContainer'
 
-<<<<<<< HEAD
+
 const ItemCount = ({ producto, stock }) => {
-=======
-const ItemCount = ({ producto, stock, setSelected }) => {
->>>>>>> 8f42db1bd407ea3e89414cddb45d495147d763b1
+
     const [cont, setCont] = useState(0)
 
     function add() {
@@ -33,11 +31,7 @@ const ItemCount = ({ producto, stock, setSelected }) => {
             <button className='btn btn-outline-secondary' onClick={substract}>
                 Restar
             </button>
-<<<<<<< HEAD
            
-=======
-            <ItemDetailContainer producto={producto} setSelected={setSelected} />
->>>>>>> 8f42db1bd407ea3e89414cddb45d495147d763b1
         </div>
     )
 }
