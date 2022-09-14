@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 
 const Item = ({ producto}) => {
 
+
     return (
         <div className={`card mb-3  ${producto.class} `}>
             <h3 className='card-header'> {producto.id}</h3>

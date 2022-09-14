@@ -23,7 +23,7 @@ const ItemCount = ({ producto, stock }) => {
 
     return (
         <div className='botonera'>
-            <p>Estas llevando: {cont}</p>
+            <p id="cantitem">Estas llevando: {cont}</p>
             <p>Stock: {stock}</p>
             <button className='btn btn-outline-primary' onClick={add}>
                 Sumar

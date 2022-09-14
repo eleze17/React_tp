@@ -2,6 +2,14 @@ import {React} from "react";
 import ItemCount from "./ItemCount";
 const Itemdetail = ({item}) => {
 
+  
+function alCarro(pid){
+  const pcantidad = document.getElementById("cantitem").textContent
+  const pedido = {id:pid,
+            cant:pcantidad   }
+  console.log(pedido)    
+}
+
    console.log(item)
 return (
         
@@ -16,7 +24,7 @@ return (
               <h5 className="card-title">{item.titulo}</h5>
               <p className="card-text">{item.detalle}</p>
               <ItemCount producto={item} stock={item.stock} />
-              <button className="btn btn-primary"> Agregar al carrito </button>
+              <button className="btn btn-primary" onClick={()=> alCarro(item.id)}> Agregar al carrito </button>
               <img src="../../Imagenes/carrito.png" style={{maxWidth: '60px'}}/>
             </div>
           </div>
