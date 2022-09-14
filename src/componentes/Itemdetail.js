@@ -1,16 +1,44 @@
-import {React} from "react";
-import ItemCount from "./ItemCount";
-const Itemdetail = ({item}) => {
+import {React,useState,useContext} from "react";
+import { Cartcontext } from '../context/Cartcontext';
 
-  
-function alCarro(pid){
-  const pcantidad = document.getElementById("cantitem").textContent
-  const pedido = {id:pid,
-            cant:pcantidad   }
-  console.log(pedido)    
+
+const Itemdetail = ({item}) => {
+const [cont, setCont] = useState(1)
+const {carrito,agregarProducto,quitarProducto,vaciarCarrito} =  useContext(Cartcontext);
+
+const alCarrito = (producto, cantidad) => {
+  const productoCarrito = {id: producto.id, cantidad: cantidad}
+  agregarProducto(productoCarrito)
+  carrito.forEach(element => { alert(`Tenes el producto ${element.id} con  ${element.cantidad} unidades en el carrito`)})
 }
 
-   console.log(item)
+function quitarProd(p){
+  let quitarp = p.id
+  quitarProducto(quitarp)
+  carrito.forEach(element => { alert(`Tenes el producto ${element.id} con  ${element.cantidad} unidades en el carrito`)})
+}
+
+function vaciarCarr(){
+  vaciarCarrito();
+  if (carrito.length==0){  
+    alert('No hay productos en el carrito') }
+}
+
+  function add() {
+    if (cont < item.stock) {
+        setCont(cont + 1)
+    } else {
+        cont = cont
+    }
+}
+function substract() {
+    if (cont > 1) {
+        setCont( cont - 1)
+    } else {
+        cont = cont
+    }
+}
+
 return (
         
   <>  
@@ -23,8 +51,21 @@ return (
             <div className="card-body">
               <h5 className="card-title">{item.titulo}</h5>
               <p className="card-text">{item.detalle}</p>
-              <ItemCount producto={item} stock={item.stock} />
-              <button className="btn btn-primary" onClick={()=> alCarro(item.id)}> Agregar al carrito </button>
+              <div className='botonera'>
+            <p id="cantitem">Estas llevando: {cont}</p>
+            <p>Stock: {item.stock}</p>
+            <button className='btn btn-outline-primary' onClick={add}>
+                Sumar
+            </button>
+            <button className='btn btn-outline-secondary' onClick={substract}>
+                Restar
+            </button>
+            </div>
+            <div>
+            <button className="btn btn-outline-warning" onClick={()=> quitarProd (item)}> Quitar este producto del carrito </button>
+            <button className="btn btn-outline-danger" onClick={()=> vaciarCarr ()}> Vaciar Carrito  </button>
+            <button className="btn btn-primary" onClick={()=> alCarrito (item,cont)}> Comprar </button>
+            </div>
               <img src="../../Imagenes/carrito.png" style={{maxWidth: '60px'}}/>
             </div>
           </div>
