@@ -124,4 +124,8 @@
         body{background-color: orange;}
 
        
-        
+        .pic-detail{width: 100%}
+        .img-detail{display: block;
+            margin:auto;}
+        .botonera{display: inline-block;}
+       

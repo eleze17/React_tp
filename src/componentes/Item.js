@@ -14,8 +14,7 @@ const Item = ({ producto}) => {
             </picture>
 
             <div className='card-body'>
-                <ItemCount producto={producto} stock={producto.stock} />
-                <Link to = {`/detalles/${producto.id}` }>
+                <Link to = {`/detalles/${producto.id}` }> 
                 <button className='btn btn-primary' type='button'>
                 Detalle
                 </button>

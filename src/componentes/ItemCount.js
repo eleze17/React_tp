@@ -4,7 +4,7 @@ import ItemDetailContainer from './ItemDetailContainer'
 
 const ItemCount = ({ producto, stock }) => {
 
-    const [cont, setCont] = useState(0)
+    const [cont, setCont] = useState(1)
 
     function add() {
         if (cont < stock) {
@@ -22,8 +22,8 @@ const ItemCount = ({ producto, stock }) => {
     }
 
     return (
-        <div>
-            <p>Contador: {cont}</p>
+        <div className='botonera'>
+            <p>Estas llevando: {cont}</p>
             <p>Stock: {stock}</p>
             <button className='btn btn-outline-primary' onClick={add}>
                 Sumar
