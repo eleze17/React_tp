@@ -15,7 +15,8 @@ const CarritoProveedor = (props) => {
         }else{
         const carritoAux = carrito
         carritoAux.splice(existe, 1,producto) 
-        setCarrito(carritoAux)   
+        setCarrito(carritoAux) 
+        calcItem()  
             }
 }
 
@@ -24,15 +25,25 @@ const CarritoProveedor = (props) => {
         let indice = carritoAux.findIndex(prod => prod.id == pid)
         indice != -1? carritoAux.splice(indice, 1) : alert('No tenes el producto este en el carrito')
         setCarrito(carritoAux)
+        calcItem()
     }
 
     const vaciarCarrito = ()=>{
-        carrito.splice(0, carrito.length)
+        setCarrito([]);
 
     }
+   
+    const calcItem = () =>{
+        let c = 0
+        let  cant = carrito.forEach(item => c = (item.cantidad + c))
+        console.log(c)
+        return c
+     }
+
+
     return (
         <>
-            <Cartcontext.Provider value={{carrito, agregarProducto, quitarProducto,vaciarCarrito}}>
+            <Cartcontext.Provider value={{carrito, agregarProducto, quitarProducto,vaciarCarrito,calcItem}}>
                     {props.children}
             </Cartcontext.Provider>
         </>

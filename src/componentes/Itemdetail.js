@@ -9,7 +9,7 @@ const {carrito,agregarProducto,quitarProducto,vaciarCarrito} =  useContext(Cartc
   const alCarrito = (producto, cantidad) => {
   const productoCarrito = {id: producto.id, cantidad: cantidad,detalle:producto.titulo,stock:producto.stock,precio:producto.precio}
   agregarProducto(productoCarrito)
-  carrito.forEach(element => { alert(`Tenes el producto ${element.id} con  ${element.cantidad} unidades en el carrito`)})
+  //carrito.forEach(element => { alert(`Tenes el producto ${element.id} con  ${element.cantidad} unidades en el carrito`)})
 }
 
   function quitarProd(p){

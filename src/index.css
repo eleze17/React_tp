@@ -145,3 +145,7 @@
         color: wheat;
         background-color: blueviolet;
        }
+
+       .span_cant{position: relative;
+                 right: 7%;
+                font-size: 35px;  }
