@@ -9,12 +9,15 @@ return(
     <picture className="pict">
         <img className="logo" src="..\Imagenes\icono.png">
         </img>
+        
+        {carro.calcItem()!=0?
         <Link to="/cart">
         <img src="../../Imagenes/carrito.png" style={{maxWidth: '60px'}}>
         </img>
-        </Link>      
+        <span className="span_cant">{carro.calcItem()}</span>   
+        </Link>:"" }
+ 
         
-        <span className="span_cant">{carro.calcItem()}</span>
     </picture>  );
 }
 export default CartWidget;

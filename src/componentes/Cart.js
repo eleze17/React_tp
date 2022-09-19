@@ -12,7 +12,6 @@ const Cart = () => {
     function quitarProd(p){
         let quitarp = p.id
         carro.quitarProducto(quitarp)
-        //carrito.forEach(element => { alert(`Tenes el producto ${element.id} con  ${element.cantidad} unidades en el carrito`)})
         setCarritaux(carrito)
         console.log(carritaux)
         console.log(carrito)
