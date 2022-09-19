@@ -21,7 +21,7 @@ const CarritoProveedor = (props) => {
 }
 
     const quitarProducto = (pid) => {
-        const carritoAux = carrito
+        const carritoAux = carrito.splice(0)
         let indice = carritoAux.findIndex(prod => prod.id == pid)
         indice != -1? carritoAux.splice(indice, 1) : alert('No tenes el producto este en el carrito')
         setCarrito(carritoAux)
