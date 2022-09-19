@@ -129,3 +129,19 @@
             margin:auto;}
         .botonera{display: inline-block;}
        
+        figure img{max-width: 150px;}
+        
+        figure img:hover{max-width: 200px;}
+        figure{display: inline-block;}
+
+
+        body{min-height: 100vh;
+            background-image: url("../public/Imagenes/casa-kame.jpg");
+            background-size: cover;
+        }
+
+        
+       .text-center{
+        color: wheat;
+        background-color: blueviolet;
+       }

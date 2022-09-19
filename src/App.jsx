@@ -5,7 +5,7 @@ import Nosotros from './componentes/Nosotros';
 import Contacto from './componentes/Contacto';
 import Producto_detalle from './componentes/Productos'
 import {BrowserRouter, Routes , Route} from "react-router-dom"
-import ItemListContainer from './componentes/ItemListContainer';
+import Cart from './componentes/Cart';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 
 function App() {
@@ -19,6 +19,8 @@ function App() {
       <Route path='/Contacto' element ={<Contacto />} > </Route>
       <Route path='/productos' element ={<Producto_detalle />} > </Route>
       <Route path='/detalles/:id' element ={<ItemDetailContainer />} > </Route>
+      <Route path='/cart' element ={<Cart />} > </Route>
+     
       </Routes>
     </BrowserRouter>
     </div>

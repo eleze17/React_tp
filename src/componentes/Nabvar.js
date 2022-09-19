@@ -6,11 +6,11 @@ return(
   
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container-fluid">
-            <a className="navbar-brand" href="../public/index.html">
+            <a className=" container-fluid navbar-brand" href="../public/index.html">
                 Tienda
             </a>
             
-            <div className="collapse navbar-collapse" id="navbarColor01">
+            <div className="navbar-nav" id="navbarColor01">
                 <ul className="navbar-nav me-auto">
                     <li className="nav-item">
                         <Link to="/" className="nav-link active" > Inicio </Link>
