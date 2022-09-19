@@ -148,4 +148,6 @@
 
        .span_cant{position: relative;
                  right: 7%;
-                font-size: 35px;  }
+                 bottom: 20px;
+                 font-size: 35px;
+                color: blueviolet;  }

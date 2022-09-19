@@ -1,6 +1,6 @@
 import {React,useState,useContext, useEffect} from "react";
 import { Cartcontext } from '../context/Cartcontext';
-
+import {Link} from  "react-router-dom"
 const Cart = () => {
     const carro =  useContext(Cartcontext);
     const {carrito} =  useContext(Cartcontext);
@@ -91,7 +91,12 @@ const Cart = () => {
         </div>
         
        ))}
-   
+       <Link to = "/productos">      
+       <button className="btn btn-outline-secondary">{(carrito.length)==0? "No tenes productos en el carro ":"Seguir comprando" }</button>
+       </Link>
+       
+       {(carrito.length)!=0? <button className="btn btn-outline-secondary">Finalizar compra</button>:"" }
+
        </div>
         );
 }
