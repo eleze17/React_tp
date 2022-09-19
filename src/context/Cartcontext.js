@@ -9,11 +9,11 @@ const CarritoProveedor = (props) => {
     const agregarProducto = (producto) => {
         let existe = carrito.findIndex(prod => prod.id ==producto.id)
         if  (existe == -1) {
-        const carritoAux = carrito
+        const carritoAux = carrito.splice(0)
         carritoAux.push(producto)
         setCarrito(carritoAux)
         }else{
-        const carritoAux = carrito
+        const carritoAux = carrito.splice(0)
         carritoAux.splice(existe, 1,producto) 
         setCarrito(carritoAux) 
         calcItem()  
