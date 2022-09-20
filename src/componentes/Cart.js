@@ -12,7 +12,7 @@ const Cart = () => {
     function quitarProd(p){
         let quitarp = p.id
         carro.quitarProducto(quitarp)
-        setCarritaux(carrito)
+            setCarritaux(carrito)
         console.log(carritaux)
         console.log(carrito)
      
@@ -90,7 +90,7 @@ const Cart = () => {
         </div>
         
        ))}
-       <Link to = "/productos">      
+       <Link to = "/categoria">      
        <button className="btn btn-outline-secondary">{(carrito.length)==0? "No tenes productos en el carro ":"Seguir comprando" }</button>
        </Link>
        

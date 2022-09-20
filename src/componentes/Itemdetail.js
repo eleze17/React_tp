@@ -69,7 +69,7 @@ return (
            { cont > 0 ?  <button className="btn btn-primary" onClick={()=> alCarrito (item,cont)}> Comprar </button>:'' }
             </div>
             <Link to = "/cart">
-              <img src="../../Imagenes/carrito.png" style={{maxWidth: '60px'}}/>
+              <img src="../../../Imagenes/carrito.png" style={{maxWidth: '60px'}}/>
               Ir al carrito
             </Link>
             </div>

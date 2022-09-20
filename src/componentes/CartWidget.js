@@ -12,7 +12,7 @@ return(
         
         {carro.calcItem()!=0?
         <Link to="/cart">
-        <img src="../../Imagenes/carrito.png" style={{maxWidth: '60px'}}>
+        <img src="../../../Imagenes/carrito.png" style={{maxWidth: '60px'}}>
         </img>
         <span className="span_cant">{carro.calcItem()}</span>   
         </Link>:"" }

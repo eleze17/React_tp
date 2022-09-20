@@ -24,8 +24,8 @@ return(
    <h1>Inicio</h1>
 
     {guerrerosState.map((guerrero) => (
-         <figure classname="figure-img img-fluid rounded" key = {guerrero.id} >
-         <img classname="img-thumbnail" src = {guerrero.imageUrl} ></img>
+         <figure  key = {guerrero.id} >
+         <img  src = {guerrero.imageUrl} ></img>
          <p>{guerrero.name}</p>
          </figure>))}
 

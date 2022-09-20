@@ -14,7 +14,7 @@ const Item = ({ producto}) => {
             </picture>
 
             <div className='card-body'>
-                <Link to = {`/detalles/${producto.id}` }> 
+                <Link to = {`/categoria/${producto.categoria}/detalles/${producto.id}`}>
                 <button className='btn btn-primary' type='button'>
                 Detalle
                 </button>

@@ -17,10 +17,11 @@ function App() {
       <Route path='/' element ={<Inicio />} > </Route>
       <Route path='/Nosotros' element ={<Nosotros />} > </Route>
       <Route path='/Contacto' element ={<Contacto />} > </Route>
-      <Route path='/productos' element ={<Producto_detalle />} > </Route>
-      <Route path='/detalles/:id' element ={<ItemDetailContainer />} > </Route>
+      <Route path='/categoria/:idCategory/detalles/:id' element ={<ItemDetailContainer />} > </Route>
+      <Route path='/categoria/:idCategory' element ={<Producto_detalle />} > </Route>
+      <Route path='/categoria' element ={<Producto_detalle />} > </Route>
       <Route path='/cart' element ={<Cart />} > </Route>
-     
+      
       </Routes>
     </BrowserRouter>
     </div>
