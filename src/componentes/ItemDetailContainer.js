@@ -1,15 +1,22 @@
 import Itemdetail from "./Itemdetail";
-import {React} from "react";
+import {React,useEffect,useState} from "react";
 import { useParams } from "react-router-dom";
-import { productos } from "./Productos";
+import getProducto from '../firebase'
 
 const ItemDetailContainer = () => {
+   const [ prod , setProd] = useState([]);
+  
    const parametro = useParams();
-    console.log(parametro.id);
+   useEffect( () =>{ 
+   
+      getProducto(parametro)
+      .then(result => setProd(result))
+      .catch(err => console.log(err));
+  }, [parametro]);  
+   
 
-    const prod = productos.find(p=>p.id == parametro.id)
-    console.log(prod);
-
+    
+   
    return (
    
    <Itemdetail item={prod} />

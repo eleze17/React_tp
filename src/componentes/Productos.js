@@ -1,6 +1,6 @@
 import {React} from "react";
 import ItemListContainer from "./ItemListContainer";
-
+/*
 export const  productos = [
     {id:'1789' ,  stock:14, class:'img1' ,titulo:'Almohada_DBZ', precio:'$1500', picture:'../../../Imagenes/almohadadbz.jpg',categoria:'paralacasa',
   detalle:'Almohada de pluma Dragon ball, para un descanso superpoderoso, medidas 80cm de largo y 20 de ancho , tenemos de distintos personajes.'},
@@ -20,7 +20,7 @@ export const  productos = [
     detalle:'Juego de play station 4, se puede jugar hasta 4 usuarios, revivi las batallas epicas de la saga de Dragon ball'},
     {id:'1990' ,  stock:8, class:'img9' ,titulo:'Vaso_DBZ', precio:'$800', picture:'../../../Imagenes/vasodbz.jpg',categoria:'paralacasa',
     detalle:'Excelente vaso para la casa, de vidrio 400 cm3 de capacidad.' },
-  ]
+  ]*/
 const Producto_detalle = ()=>{
 return(
   
