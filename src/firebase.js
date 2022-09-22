@@ -15,30 +15,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const getProducto = async(id) =>{
-      const prod = await getDoc(doc(db,'productos',id))
-      return prod
+export const getProductos = async() =>{
+ const prod = await getDocs(collection(db,'productos'))
+ console.log(prod.docs)
+return prod.docs
 }
 
-/*const getProductos = async () =>{
-  const productos = await getDocs(collection(db,'productos'))
-  return productos
-}*/
+export const getProducto = async(id) => {
+ let p
+  const producto = await getDoc(doc(db,"productos",id))
+ p =[producto.id,producto.data()] 
+ return p
 
-
- const firestoreFetch = async(cat) => {
-  let category;
-  if (cat != undefined  ) {
-      category = query(collection(db, "productos"), where('categoria', '==', cat));
-  } else {
-     category = query(collection(db, "productos"), orderBy('titulo'));
-  }
-  const datos = await getDocs(category);
-  const data = datos.docs.map(document => ({
-      id: document.id,
-      ...document.data()
-  }));
-  return data;
 }
 
-export default (db,app,getProducto,firestoreFetch);
+export default (db,app);

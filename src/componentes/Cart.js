@@ -79,7 +79,7 @@ const Cart = () => {
             <div className="col text-center"> {item.precio}</div>
             <div className="col text-center"> {item.cantidad}</div>
            
-            <div className="col text-center"> {item.cantidad * parseInt(item.precio.substring(1,item.precio.length ))}</div>
+            <div className="col text-center"> {item.cantidad * item.precio}</div>
 
           <div className="col text-center">
           <button className='btn btn-outline-success text-center' onClick={()=>quitarProd(item)}>
