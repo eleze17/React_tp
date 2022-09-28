@@ -7,8 +7,8 @@ const CarritoProveedor = (props) => {
     const [carrito, setCarrito] = useState([]);
 
     const agregarProducto = (producto) => {
-        let existe = carrito.findIndex(prod => prod.id ==producto.id)
-        if  (existe == -1) {
+        let existe = carrito.findIndex(prod => prod.id ===producto.id)
+        if  (existe === -1) {
         const carritoAux = carrito.splice(0)
         carritoAux.push(producto)
         setCarrito(carritoAux)
@@ -22,8 +22,8 @@ const CarritoProveedor = (props) => {
 
     const quitarProducto = (pid) => {
         const carritoAux = carrito.splice(0)
-        let indice = carritoAux.findIndex(prod => prod.id == pid)
-        indice != -1? carritoAux.splice(indice, 1) : alert('No tenes el producto este en el carrito')
+        let indice = carritoAux.findIndex(prod => prod.id === pid)
+        indice !== -1? carritoAux.splice(indice, 1) : alert('No tenes el producto este en el carrito')
         setCarrito(carritoAux)
         calcItem()
     }
@@ -35,8 +35,8 @@ const CarritoProveedor = (props) => {
    
     const calcItem = () =>{
         let c = 0
-        let  cant = carrito.forEach(item => c = (item.cantidad + c))
-        console.log(c)
+        carrito.forEach(item => c = (item.cantidad + c))
+       
         return c
      }
 

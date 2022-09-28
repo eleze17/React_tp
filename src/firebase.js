@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { updateDoc,orderBy,query,collection,addDoc ,getDoc,getDocs,deleteDoc,setDoc,doc,getFirestore } from "firebase/firestore";
-import {React,useState,useContext, useEffect} from "react";
+import { updateDoc,collection,getDoc,getDocs,setDoc,doc,getFirestore } from "firebase/firestore";
 import Swal from 'sweetalert2'
 
 
