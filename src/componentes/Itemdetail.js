@@ -3,7 +3,7 @@ import { Cartcontext } from '../context/Cartcontext';
 import {Link} from  "react-router-dom"
 
 const Itemdetail = ({item}) => {
-  console.log(item)
+console.log(item)
 const [cont, setCont] = useState(0)
 const {carrito,agregarProducto,quitarProducto,vaciarCarrito} =  useContext(Cartcontext);
 

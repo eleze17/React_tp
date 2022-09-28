@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
-import { where,orderBy,query,collection,addDoc ,getDoc,getDocs,deleteDoc,updateDoc,doc,getFirestore } from "firebase/firestore";
+import { updateDoc,orderBy,query,collection,addDoc ,getDoc,getDocs,deleteDoc,setDoc,doc,getFirestore } from "firebase/firestore";
+import {React,useState,useContext, useEffect} from "react";
+import Swal from 'sweetalert2'
 
 
 const firebaseConfig = {
@@ -28,5 +30,59 @@ export const getProducto = async(id) => {
  return p
 
 }
+
+
+const creaOrden = async (orden)=>{
+const newOrden = doc(collection(db, "ordenes"));
+await setDoc(newOrden, orden);
+return newOrden;
+}
+
+
+
+export const Compra =(comprador,productos) => {
+  
+  let dia = new Date();
+  let fecha = dia.toLocaleString();
+  let orden = {
+    usuario:{
+        nombre:comprador.nombre,
+        telefono:comprador.telefono,
+        email:comprador.mail },
+    fecha:fecha, 
+    items: productos.map( item=> ({
+      id:item.id, 
+      nombre:item.titulo,
+      cantidad:item.cantidad,
+      precio: item.precio * item.cantidad}  
+    ))}
+    creaOrden(orden)
+    .then(result => Swal.fire({
+        title: "Su compra se realizo con exito",
+        text: `Su N° de ID es: ${result.id}`,
+        icon: "success",
+        button: "OK"
+    }))
+    .catch(err => console.log(err));
+
+      productos.forEach(async (item) => {
+      item.stock = item.stock - item.cantidad
+      const itemRef = doc(db,"productos",item.id)
+      console.log(itemRef)
+      await updateDoc(itemRef,               
+          item    
+      )
+  })
+   
+  
+  }
+  
+
+
+ 
+
+    
+
+
 
 export default (db,app);
