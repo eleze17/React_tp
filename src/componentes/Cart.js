@@ -84,7 +84,7 @@ import {Compra} from "../firebase";
             </button>
             </div>
             <div className="col text-center"> {item.precio}</div>
-            <div className="col text-center"> {cont || item.cantidad}</div>
+            <div className="col text-center"> {item.cantidad}</div>
            
             <div className="col text-center"> {item.cantidad * item.precio}</div>
 
