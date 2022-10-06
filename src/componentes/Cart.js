@@ -49,7 +49,7 @@ import {Compra} from "../firebase";
     
     }
     function substract(i) {
-        if (i.cantidad > 0) {
+        if (i.cantidad > 1) {
             i.cantidad= i.cantidad - 1
         } else {
             
