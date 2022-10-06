@@ -53,7 +53,7 @@ return (
               <div className='botonera'>
             <p id="cantitem">Estas llevando: {cont}</p>
             <p>Stock: {item[1].stock}</p>
-          
+            <p>Precio: {item[1].precio}</p>
             <button className='btn btn-outline-primary' onClick={add}>
                 +
             </button>
